@@ -4,7 +4,7 @@ RUN   = $(NVIM) --headless --clean -l tests/run.lua
 UNIT = parser server sync herdr
 E2E  = quarto_parity e2e_browser
 
-.PHONY: test unit e2e herdr herdr-tb strict
+.PHONY: test unit e2e herdr herdr-tb strict demo
 
 # Everything. Tests needing quarto/Chrome/herdr SKIP (loudly) when missing.
 test:
@@ -31,3 +31,7 @@ herdr-tb:
 strict:
 	@fail=0; for s in $(UNIT) $(E2E); do STRICT=1 $(RUN) tests/spec/$${s}_spec.lua || fail=1; done; exit $$fail
 
+
+# Re-record demo/quarto-deck-demo.{gif,mp4}: VHS + herdr + nvim + carbonyl.
+demo:
+	@bash demo/record.sh
