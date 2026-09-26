@@ -1,0 +1,31 @@
+id = "hyunhwan-bcm.quarto-deck"
+name = "Quarto Deck"
+version = "0.1.0"
+min_herdr_version = "0.8.0"
+description = "Sync a Quarto revealjs deck between nvim and a terminal browser, laid out as nvim | agent / page"
+platforms = ["macos", "linux"]
+
+# Each action drives the quarto-deck nvim plugin in the focused pane, which
+# must be running nvim with a .qmd open. The nvim plugin does the work (it
+# owns the cursor and the sync server); these are just keybindable triggers.
+
+[[actions]]
+id = "start"
+title = "Quarto deck: start"
+description = "Serve the deck in the focused nvim and lay out nvim | agent / page"
+contexts = ["pane"]
+command = ["bash", "bin/deck.sh", "start"]
+
+[[actions]]
+id = "stop"
+title = "Quarto deck: stop"
+description = "Stop the deck server and close the page pane (the agent pane stays)"
+contexts = ["pane"]
+command = ["bash", "bin/deck.sh", "stop"]
+
+[[actions]]
+id = "render"
+title = "Quarto deck: render"
+description = "Re-render the deck now"
+contexts = ["pane"]
+command = ["bash", "bin/deck.sh", "render"]

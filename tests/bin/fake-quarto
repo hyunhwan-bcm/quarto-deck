@@ -1,0 +1,9 @@
+#!/bin/sh
+# Stand-in for `quarto render FILE --to revealjs` in tests.
+[ -n "$FAKE_QUARTO_LOG" ] && echo "$*" >> "$FAKE_QUARTO_LOG"
+if [ "$FAKE_QUARTO_FAIL" = 1 ]; then
+  echo "ERROR: fake render failure" >&2
+  exit 1
+fi
+out="${2%.qmd}.html"
+printf '<html><body><div class="reveal">rendered %s</div></body></html>\n' "$(date +%s)" > "$out"

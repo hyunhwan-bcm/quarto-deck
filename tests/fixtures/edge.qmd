@@ -1,0 +1,26 @@
+---
+format: revealjs
+---
+
+Content before any heading.
+
+---
+
+## After dropped rule
+
+---
+
+## B
+
+content b
+
+Big
+===
+
+## D
+
+---
+
+---
+
+tail

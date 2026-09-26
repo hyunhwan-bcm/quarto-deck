@@ -1,0 +1,10 @@
+#!/bin/sh
+# Stand-in for the herdr CLI: records each call, answers `pane split` with a
+# new pane id in herdr's JSON shape ({"result":{"pane":{"pane_id":...}}}).
+echo "$*" >> "$FAKE_HERDR_LOG"
+if [ "$1 $2" = "pane split" ]; then
+  n=$(wc -l < "$FAKE_HERDR_LOG" | tr -d ' ')
+  printf '{"result":{"pane":{"pane_id":"w1:p%s"}}}\n' "$((n + 1))"
+fi
+[ "$FAKE_HERDR_FAIL" = "$1 $2" ] && { echo "boom" >&2; exit 1; }
+exit 0

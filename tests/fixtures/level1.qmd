@@ -1,0 +1,16 @@
+---
+title: "Level one"
+format:
+  revealjs:
+    slide-level: 1
+---
+
+# One
+
+## not a slide at level 1
+
+text
+
+# Two
+
+### deeper

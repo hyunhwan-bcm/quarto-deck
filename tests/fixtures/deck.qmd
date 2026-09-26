@@ -1,0 +1,59 @@
+---
+title: "Quarto Deck Fixture"
+subtitle: "sync test"
+format: revealjs
+---
+
+# Introduction
+
+## First slide
+
+Some text.
+
+```python
+# a comment, not a heading
+## also not a heading
+print("hi")
+```
+
+## Hidden slide {visibility="hidden"}
+
+This slide is removed from the output.
+
+## Columns {.smaller}
+
+:::: {.columns}
+::: {.column width="50%"}
+left
+:::
+::: {.column width="50%"}
+right
+:::
+::::
+
+---
+
+A slide started by a horizontal rule.
+
+<!--
+## commented out heading
+-->
+
+Setext heading
+--------------
+
+text under setext
+
+# Second section {background-color="#140E32"}
+
+## Slide with notes
+
+Body.
+
+::: notes
+Speaker notes here.
+:::
+
+## Last slide
+
+The end.

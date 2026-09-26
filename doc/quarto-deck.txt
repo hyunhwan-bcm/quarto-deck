@@ -1,0 +1,23 @@
+*quarto-deck.txt*  Sync a Quarto revealjs deck with the browser
+
+COMMANDS                                                         *:QuartoDeck*
+
+:QuartoDeck start     Serve the current .qmd (render first if stale) and open it
+:QuartoDeck stop      Stop the server; close the herdr page pane
+:QuartoDeck open      Open the deck in the browser again
+:QuartoDeck render    Re-render now
+:QuartoDeck layout    Rebuild the herdr panes (nvim | agent / page)
+:QuartoDeck status    URL, slide, browser slide count, last render
+:QuartoDeck log       Open the server/render log
+:QuartoDeck url       Copy the URL
+
+Moving the cursor moves the browser; navigating the browser moves the cursor.
+:write re-renders and reloads the page on the cursor's slide.
+
+SETUP                                                      *quarto-deck-setup*
+
+    require("quarto-deck").setup({ quarto = "/path/to/quarto" })
+
+See README.md for every option.
+
+ vim:tw=78:ts=8:ft=help:norl:
