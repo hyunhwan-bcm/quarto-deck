@@ -4,10 +4,10 @@ Keep a Quarto revealjs deck and your Neovim cursor in sync.
 
 ![quarto-deck demo: nvim and the deck side by side in herdr](demo/quarto-deck-demo.gif)
 
-<sub>A real recording (`make demo`, made with [VHS](https://github.com/charmbracelet/vhs)):
-herdr, nvim with this plugin, and [carbonyl](https://github.com/fathyb/carbonyl) in
-the page pane. Day to day, the page pane runs terminal-browser, which draws
-with kitty graphics that VHS can't record. [MP4](demo/quarto-deck-demo.mp4).</sub>
+<sub>A screen recording of the real thing on macOS: Ghostty, herdr, nvim (NvChad) with
+this plugin, and [terminal-browser](https://github.com/zenbu-labs/terminal-browser)
+in the page pane. The claude pane is turned off for the recording.
+[MP4](demo/quarto-deck-demo.mp4).</sub>
 
 - Move the cursor in `slides.qmd` and the browser jumps to that slide.
 - Page through the deck in the browser and the cursor follows.
