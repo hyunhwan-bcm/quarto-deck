@@ -1,0 +1,35 @@
+---
+title: "quarto-deck"
+subtitle: "nvim and revealjs, in sync"
+format:
+  revealjs:
+    theme: moon
+---
+
+# Why
+
+## Slides in a text editor
+
+- The source lives in nvim
+- The deck lives in a browser
+- Keeping both in view is manual work
+
+## The fix
+
+- Move the cursor, and the slide follows
+- Page the deck, and the cursor follows
+
+# How
+
+## Save to re-render
+
+- Save, and quarto re-renders
+- The page reloads on the same slide
+- Nothing to click
+
+## Inside herdr
+
+- nvim on the left
+- agent and page on the right
+
+## Thank you
